@@ -25,7 +25,7 @@ Incluye animaciones, efectos de sonido (muteables) y la posibilidad de revertir 
 2. Selecciona **"Download ZIP"**.
 3. Extrae el contenido del ZIP en una carpeta local.
 4. Abre Microsoft Edge y navega a `edge://extensions/`.
-5. Activa el **Modo desarrollador** (esquina inferior izquierda).
+5. Activa el **Modo desarrollador**
 6. Haz clic en **"Cargar extensión sin empaquetar"**.
 7. Selecciona la carpeta donde extrajiste los archivos.
 
