@@ -1,7 +1,7 @@
-# 🛡️ AntiPromos PiviGames v1.2.0
+# 🛡️ AntiPromos PiviGames v1.3.0
 
 Extensión para Microsoft Edge que elimina automáticamente las secciones promocionales de pivigames.blog.  
-Incluye animaciones, sonidos personalizados y la posibilidad de revertir al estado original.
+Incluye animaciones, sonidos personalizados (muteables) y la posibilidad de revertir al estado original.
 
 
 <table style="border:none" align="center">
