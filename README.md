@@ -18,6 +18,7 @@ Incluye animaciones, sonidos personalizados (muteables) y la posibilidad de reve
 </table>
 
 
+ 
 ## ⚙️ Instalación manual desde GitHub
 
 1. Haz clic en el botón verde **"Code"** en la parte superior derecha del repositorio.
@@ -30,7 +31,8 @@ Incluye animaciones, sonidos personalizados (muteables) y la posibilidad de reve
 
 ✅ ¡Listo! Verás el icono de la extensión en la barra del navegador, listo para filtrar las promos de pivi a golpe de botón.
 
----
+
+ 
 
 ## 📁 Estructura del proyecto
 
