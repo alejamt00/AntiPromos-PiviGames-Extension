@@ -89,18 +89,27 @@
   </style>
 </head>
 <body>
-  <h2>😠 Fuck anuncios 😠</h2>
-  <p id="estado"></p>
-  <button id="toggle" class="inactive">Activar filtro</button>
 
-  <audio id="sonidoEliminar" src="../assets/eliminar.mp3" preload="auto"></audio>
-  <audio id="sonidoRestaurar" src="../assets/restaurar.mp3" preload="auto"></audio>
+	<div id="audioToggle" style="
+	  position: fixed;
+	  top: 8px;
+	  right: 8px;
+	  font-size: 22px;
+	  cursor: pointer;
+	  z-index: 999;
+	">🔊</div>
+	<h2>😠 Fuck anuncios 😠</h2>
+	<p id="estado"></p>
+	<button id="toggle" class="inactive">Activar filtro</button>
 
-  <footer>
-    <code id="osakiFirma">/* Crafted with 💜 by Osaki */</code>
-  </footer>
-  <span id="versionInfo">v1.2.0</span>
+	<audio id="sonidoEliminar" src="../assets/eliminar.mp3" preload="auto"></audio>
+	<audio id="sonidoRestaurar" src="../assets/restaurar.mp3" preload="auto"></audio>
 
-  <script src="popup.js"></script>
+	<footer>
+		<code id="osakiFirma">/* Crafted with 💜 by Osaki */</code>
+	</footer>
+	<span id="versionInfo">v1.3.0</span>
+
+	<script src="popup.js"></script>
 </body>
 </html>

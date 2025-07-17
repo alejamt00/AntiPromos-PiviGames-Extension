@@ -3,6 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusText = document.getElementById("estado");
   const sonidoEliminar = document.getElementById("sonidoEliminar");
   const sonidoRestaurar = document.getElementById("sonidoRestaurar");
+  const audioToggle = document.getElementById("audioToggle");
+
+  // Cargar estado del botón de audio
+  chrome.storage.local.get("audioEnabled", (data) => {
+    const habilitado = data.audioEnabled !== false; // por defecto true
+    audioToggle.textContent = habilitado ? "🔊" : "🔇";
+  });
+
+  audioToggle.addEventListener("click", () => {
+    chrome.storage.local.get("audioEnabled", (data) => {
+      const actual = data.audioEnabled !== false;
+      const nuevo = !actual;
+      chrome.storage.local.set({ audioEnabled: nuevo });
+      audioToggle.textContent = nuevo ? "🔊" : "🔇";
+    });
+  });
 
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const tabURL = tabs[0]?.url ?? "";
@@ -26,8 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
         chrome.storage.local.set({ filtroActivo: nuevoEstado });
         ejecutarFiltro(nuevoEstado);
         actualizarBoton(toggleButton, nuevoEstado);
-        if (nuevoEstado) sonidoEliminar?.play();
-        else sonidoRestaurar?.play();
+
+        chrome.storage.local.get("audioEnabled", (data) => {
+          const sonidoOn = data.audioEnabled !== false;
+          if (!sonidoOn) return;
+          if (nuevoEstado) sonidoEliminar?.play();
+          else sonidoRestaurar?.play();
+        });
       });
     });
   });
