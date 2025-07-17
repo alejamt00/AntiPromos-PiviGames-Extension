@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Filtro PiviGames</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1b1b2f, #23233a);
+      color: #fff;
+      width: 400px;
+      height: 200px;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #estado {
+      font-size: 14px;
+      background-color: rgba(255, 204, 0, 0.15);
+      color: #ffcc00;
+      padding: 8px 16px;
+      border-radius: 6px;
+      box-shadow: inset 0 0 4px rgba(255,204,0,0.4);
+      max-width: 360px;
+      line-height: 1.4;
+      margin-top: 8px;
+      display: none;
+    }
+
+    #toggle {
+      margin-top: 16px;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #toggle.active { background-color: #dc3545; }
+    #toggle.inactive { background-color: #28a745; }
+    #toggle:hover { transform: scale(1.05); }
+
+    footer {
+      font-size: 11px;
+      margin-top: auto;
+      font-family: 'Courier New', monospace;
+      opacity: 0.85;
+      text-align: center;
+    }
+
+    #osakiFirma {
+      animation: pulseGlow 3s infinite ease-in-out;
+      display: inline-block;
+    }
+
+    @keyframes pulseGlow {
+      0%   { text-shadow: 0 0 4px rgba(191, 0, 255, 0.4); }
+      50%  { text-shadow: 0 0 10px rgba(191, 0, 255, 0.9); }
+      100% { text-shadow: 0 0 4px rgba(191, 0, 255, 0.4); }
+    }
+
+    #versionInfo {
+      position: absolute;
+      bottom: 6px;
+      right: 8px;
+      font-size: 10px;
+      opacity: 0.6;
+      font-family: 'Courier New', monospace;
+    }
+
+    audio { display: none; }
+  </style>
+</head>
+<body>
+  <h2>😠 Fuck anuncios 😠</h2>
+  <p id="estado"></p>
+  <button id="toggle" class="inactive">Activar filtro</button>
+
+  <audio id="sonidoEliminar" src="../assets/eliminar.mp3" preload="auto"></audio>
+  <audio id="sonidoRestaurar" src="../assets/restaurar.mp3" preload="auto"></audio>
+
+  <footer>
+    <code id="osakiFirma">/* Crafted with 💜 by Osaki */</code>
+  </footer>
+  <span id="versionInfo">v1.2.0</span>
+
+  <script src="popup.js"></script>
+</body>
+</html>
